@@ -1,11 +1,13 @@
 <?php
 
+
+
 use Illuminate\Database\Seeder;
 
 class usersTableSeeder extends Seeder
 {
     // Let's clear the users table first
-        users::truncate();
+         User::truncate();
 
         $faker = \Faker\Factory::create();
 
@@ -14,7 +16,7 @@ class usersTableSeeder extends Seeder
         // will be too slow.
         $password = Hash::make('toptal');
 
-        users::create([
+         User::create([
             'name' => 'Administrator',
             'email' => 'admin@test.com',
             'password' => $password,
@@ -22,7 +24,7 @@ class usersTableSeeder extends Seeder
 
         // And now let's generate a few dozen users for our app:
         for ($i = 0; $i < 10; $i++) {
-            users::create([
+             User::create([
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password' => $password,
