@@ -15,10 +15,10 @@ use Illuminate\Http\Request;
 
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::get('tasks', 'tasksController@index');
-	Route::get('tasks/{id}', 'tasksController@show');
-	Route::post('tasks', 'tasksController@store');
-	Route::put('tasks/{id}', 'tasksController@update');
-	Route::delete('tasks/{id}', 'tasksController@delete');
+    Route::get('tareas/Consultar', 'tasksController@index');
+	Route::get('tareas/Consultar/{id}', 'tasksController@show');
+	Route::post('tareas/crear', 'tasksController@store');
+	Route::put('tareas/actualizar/{id}', 'tasksController@update');
+	Route::delete('tareas/borrar/{id}', 'tasksController@delete');
 
 });

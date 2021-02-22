@@ -1,5 +1,7 @@
 <?php
 
+use App\tasks;
+
 use Illuminate\Database\Seeder;
 
 class tasksTableSeeder extends Seeder
